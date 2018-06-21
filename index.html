@@ -1,26 +1,62 @@
-<!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/w3css/3/w3.css">
+
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpongeBob</title>
+<link rel="stylesheet" href="sponge.css">
 <body>
 
-<!-- Navigation -->
-<nav class="w3-bar w3-black">
-  <a href="#memes" class="w3-button w3-bar-item">SpongeBob Memes</a>
-  <a href="#gifs" class="w3-button w3-bar-item">SpongeBob Gifs</a>
-  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
-</nav>
+<center>
+ <div class="row">
+        <div class="col-md-12">
+          <img class="img-responsive" src="shirt.jpg" alt="Sponge Shirt">
+        </div>
+        </center>
 
-<!-- Slide Show -->
-<section>
-  <img class="mySlides" src="photos/busy.jpg"
-  style="width:100%">
-  <img class="mySlides" src="img_band_ny.jpg"
-  style="width:100%">
-  <img class="mySlides" src="img_band_chicago.jpg"
-  style="width:100%">
-</section>
+
+
+<center>
+
+<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<textarea id="text" cols="45" rows="3">Hello world</textarea>
+
+<select id="voiceselection"></select> 
+
+<input 
+  onclick="responsiveVoice.speak($('#text').val(),$('#voiceselection').val());" 
+  type="button" 
+  value="Play" />
+
+<script>
+        //Populate voice selection dropdown
+        var voicelist = responsiveVoice.getVoices();
+        var vselect = $("#voiceselection");
+        $.each(voicelist, function() {
+                vselect.append($("<option />").val(this.name).text(this.name));
+        });
+</script>
+
+</center>
+
+
+<center>
+ <div class="row">
+        <div class="col-md-12">
+         <h2>Welcome</h2>
+<p><a href="meme.html">ENTER</a></p>
+        </div>
+        </center>
+
+
+        
+  
+
+
 
 </body>
 </html>
